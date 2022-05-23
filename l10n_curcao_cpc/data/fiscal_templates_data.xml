@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Fiscal Position Templates -->
+
+    <record id="fiscal_position_template_1" model="account.fiscal.position.template">
+            <field name="sequence">1</field>
+            <field name="name">National Scheme</field>
+            <field name="chart_template_id" ref="l10ncarcaocmd_chart_template"/>
+            <field name="auto_apply" eval="True"/>
+            <field name="vat_required" eval="True"/>
+            <field name="country_id" ref="base.cw"/>
+    </record>
+
+    <record id="fiscal_position_template_5" model="account.fiscal.position.template">
+            <field name="sequence">2</field>
+            <field name="name">Private Carcao</field>
+            <field name="chart_template_id" ref="l10ncarcaocmd_chart_template"/>
+            <field name="auto_apply" eval="True"/>
+            <field name="country_group_id" ref="base.south_america"/>
+    </record>
+
+    <record id="fiscal_position_template_2" model="account.fiscal.position.template">
+            <field name="sequence">4</field>
+            <field name="name">Extra-Community Scheme</field>
+            <field name="chart_template_id" ref="l10ncarcaocmd_chart_template"/>
+            <field name="auto_apply" eval="True"/>
+    </record>
+
+    <record id="fiscal_position_template_3" model="account.fiscal.position.template">
+            <field name="sequence">3</field>
+            <field name="name">Intra-Community Regime</field>
+            <field name="chart_template_id" ref="l10ncarcaocmd_chart_template"/>
+            <field name="auto_apply" eval="True"/>
+            <field name="vat_required" eval="True"/>
+            <field name="country_group_id" ref="base.europe"/>
+    </record>
+
+    <record id="fiscal_position_template_4" model="account.fiscal.position.template">
+            <field name="name">Co-contracting scheme</field>
+            <field name="sequence">5</field>
+            <field name="chart_template_id" ref="l10ncarcaocmd_chart_template"/>
+    </record>
+
+    <!-- Fiscal Position Account Templates -->
+
+    <record id="fiscal_position_account_template_3" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_template_3"  />
+            <field name="account_src_id" ref="l10n_curcao_cpc.account_activa_account_101000" />
+            <field name="account_dest_id" ref="l10n_curcao_cpc.account_activa_account_210532" />
+    </record>
+
+    <record id="fiscal_position_account_template_4" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_template_3"  />
+            <field name="account_src_id" ref="l10n_curcao_cpc.account_activa_account_101200" />
+            <field name="account_dest_id" ref="l10n_curcao_cpc.account_activa_account_101210" />
+    </record>
+
+    <record id="fiscal_position_account_template_6" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_template_3"  />
+            <field name="account_src_id" ref="l10n_curcao_cpc.account_activa_account_101000" />
+            <field name="account_dest_id" ref="l10n_curcao_cpc.account_activa_account_720100" />
+    </record>
+
+    <record id="fiscal_position_account_template_7" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_template_2"  />
+            <field name="account_src_id" ref="l10n_curcao_cpc.account_activa_account_101220" />
+            <field name="account_dest_id" ref="l10n_curcao_cpc.account_activa_account_101210" />
+    </record>
+    <record id="fiscal_position_account_template_8" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_template_2"  />
+            <field name="account_src_id" ref="l10n_curcao_cpc.account_activa_account_101230" />
+            <field name="account_dest_id" ref="l10n_curcao_cpc.account_activa_account_101230" />
+    </record>
+
+</odoo>

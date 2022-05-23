@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="l10ncarcaocmd_chart_template" model="account.chart.template">
+            <field name="name">Carcao CPC Chart of Account</field>
+            <field name="code_digits">6</field>
+            <field name="property_account_receivable_id" ref="account_activa_account_101000"/>
+            <field name="property_account_payable_id" ref="account_activa_account_720920"/>
+            <field name="property_account_expense_categ_id" ref="account_activa_account_720000"/>
+            <field name="property_account_income_categ_id" ref="account_activa_account_500100"/>
+            <field name="expense_currency_exchange_account_id" ref="account_activa_account_720510"/>
+            <field name="income_currency_exchange_account_id" ref="account_activa_account_720510"/>
+            <field name="property_tax_payable_account_id" ref="account_activa_account_720920"/>
+            <field name="property_tax_receivable_account_id" ref="account_activa_account_210532"/>
+            <field name="default_pos_receivable_account_id" ref="account_activa_account_101000" />
+            <field name="account_journal_suspense_account_id" ref="account_activa_account_720100"/>
+        </record>
+</odoo>
